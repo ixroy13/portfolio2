@@ -1,12 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar"
+import Background from "./components/Background";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello</h1>
-      </header>
+      <Background />
+      <Navbar />
+      <Hero />
+      <Footer />
     </div>
   );
 }
