@@ -5,7 +5,7 @@ export default function Hero() {
         <section className="hero-section">
             <div className="main-text">
                 <h1>
-                    Hi! I'm qeqwe,
+                    Hi! I'm Ala,
                     beginner web developer  
                 </h1>
             </div>
