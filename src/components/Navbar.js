@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/nav.css"
 
 export default function Navbar() {
     return (
         <nav>
             <div className="logo-btn">
-                <a href="#">Ixroy</a>
+                <a href="#"><h1>Ixroy</h1></a>
             </div>
             <div className="menu-list">
                 <ul className="main-menu">

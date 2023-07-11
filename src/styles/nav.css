@@ -1,0 +1,52 @@
+.logo-btn h1 {
+    animation: split 1s ease-out;
+    animation-iteration-count: infinite;
+    text-transform: uppercase;
+}
+
+@keyframes split {
+    0% {
+        translate: 0;
+        text-shadow:
+        .1em 0 0 #0227f5,
+        -.05em 0 0 #4affff,
+        -.1em 0 0 #ff0825,
+        -.2em 0 0 #fffb19;
+    }
+
+    5% {
+        translate: -0.1em;
+        text-shadow:
+        -.05em 0 0 #0227f5,
+        .1em 0 0 #4affff,
+        .05em 0 0 #ff0825,
+        -.1em 0 0 #fffb19;
+        }
+
+    10% {
+        translate: 0.05em;
+        text-shadow:
+        .2em 0 0 #0227f5,
+        .05em 0 0 #4affff,
+        -.1em 0 0 #ff0825,
+        -.05em 0 0 #fffb19;
+    }
+
+    15% {
+        translate: -0.1em;
+        text-shadow:
+        -.04em 0 0 #0227f5,
+        .05em 0 0 #4affff,
+        -.1em 0 0 #ff0825,
+        .05em 0 0 #fffb19;
+    }
+
+    80% {
+        translate: 0;
+        text-shadow:
+        0 0 0 #0227f5,
+        0 0 0 #4affff,
+        0 0 0 #ff0825,
+        0 0 0 #fffb19;
+    }
+}

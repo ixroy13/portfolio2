@@ -126,22 +126,6 @@ nav {
     font-weight: 500;
 }
 
-/* FOOTER */
-
-footer {
-    max-width: 100%;
-    display: flex;
-    bottom: 0;
-    min-height: 5rem;
-}
-
-footer div {
-    width: calc(100% / 3);
-}
-
-/* .nav-links {
-} */
-
 .socials {
     display: flex;
     justify-content: center;

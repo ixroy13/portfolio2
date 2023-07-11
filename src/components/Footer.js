@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/footer.css"
 
 export default function Footer() {
     return (
@@ -7,14 +8,25 @@ export default function Footer() {
 
             </div>
             <div className="socials">
-                <div className="ig xd">
-                    <i className="fab fa-instagram"></i>
+                <div className="ig">
+                    <a href="https://www.instagram.com/olek.pal/" target="_blank">
+                        <i className="fab fa-instagram"></i>
+                    </a>
                 </div>
                 <div className="gh">
-                    <i className="fab fa-github"></i>
+                    <a href="https://github.com/ixroy13" target="_blank">
+                        <i className="fab fa-github"></i>    
+                    </a>
                 </div>
                 <div className="tt">
-                    <i className="fab fa-twitter"></i>
+                    <a href="https://twitter.com/olekpal" target="_blank">
+                        <i className="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <div className="fb">
+                    <a href="https://twitter.com/olekpal" target="_blank">
+                        <i className="fab fa-facebook"></i>
+                    </a>
                 </div>
             </div>
             <div className="contact">
