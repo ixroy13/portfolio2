@@ -1,0 +1,35 @@
+.skills {
+    padding: 0;
+    margin: clamp(5rem, 7vw, 10rem) 0;
+}
+
+.title {
+    position: relative;
+    min-height: clamp(10rem, 15vw, 20rem);
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.title::after {
+    content: "";
+    background-image: linear-gradient(
+        45deg,
+        #12c2e9,
+        #c471ed,
+        #f64f59
+    );
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transform: skewY(-5deg);
+}
+
+.skills-level {
+    margin: clamp(2rem, 10vw, 7rem) 4%;
+    background: red;
+    border-radius: .8rem;
+    width: calc(100% - 8%);
+    height: 15rem;
+}
