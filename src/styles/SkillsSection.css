@@ -28,7 +28,6 @@
 
 .skills-level {
     margin: clamp(2rem, 10vw, 7rem) 4%;
-    border: px solid red;
     border-radius: .8rem;
     width: calc(100% - 8%);
 }

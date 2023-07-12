@@ -6,9 +6,7 @@
     min-width: 55%;
 }
 
-.about-me {
-    max-width: 35%;
-}
+
 
 .main-text h1 {
     font-size: clamp(50px, 7vw, 100px);
@@ -23,6 +21,12 @@
     font-size: clamp(5rem, 7vw, 15rem);
 }
 
+@media (min-width: 200px) {
+    .about-me {
+        max-width: 100% !important;
+    }
+}
+
 @media (min-width: 600px){
     
     .hero-section {
@@ -34,6 +38,10 @@
 
     .hero-section div {
         width: 47%;
+    }
+
+    .about-me {
+        max-width: 30%;
     }
 
 }
