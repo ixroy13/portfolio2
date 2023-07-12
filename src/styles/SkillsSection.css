@@ -1,6 +1,6 @@
 .skills {
     padding: 0;
-    margin: clamp(5rem, 7vw, 10rem) 0;
+    margin-top: clamp(5rem, 7vw, 10rem);
 }
 
 .title {
@@ -28,8 +28,19 @@
 
 .skills-level {
     margin: clamp(2rem, 10vw, 7rem) 4%;
-    background: red;
+    border: px solid red;
     border-radius: .8rem;
     width: calc(100% - 8%);
-    height: 15rem;
+}
+
+@media (min-width: 1000px) {
+    .skills-level {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .skill-box {
+        width: 48%;
+    }
 }

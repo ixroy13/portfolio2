@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/hero.css"
 
 export default function Hero() {
     return (
@@ -27,6 +28,11 @@ export default function Hero() {
                     <h2>2 years</h2>
                 </div>
             </div>
+            <button className="btn-deafult scroll-arrow">
+                <a href="#skills-section">
+                    <span className="sr-only">Scroll down arrow</span>
+                    <i className="fas fa-arrow-down"></i></a>
+                </button>
         </section>
     )
 }

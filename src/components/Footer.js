@@ -31,7 +31,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="contact">
-
+                <p>© 2023 IXROY Corp.</p>
             </div>
         </footer>
     )

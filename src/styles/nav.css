@@ -1,6 +1,5 @@
 .logo-btn h1 {
-    animation: split 1.5s ease-out;
-    animation-iteration-count: infinite;
+    animation: split 1.5s ease-out infinite;
     text-transform: uppercase;
 }
 
@@ -51,6 +50,29 @@
     }
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 4%;
+    font-size: 1.2em;
+}
+
+.btn-deafult {
+    font-size: 1.2em;
+    border: none;
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.menu-list ul {
+    list-style: none;
+    display: flex;
+    column-gap: 2rem;
+    font-weight: 500;
+}
+
 /* MENU UNDERLINE */
 
 .menu-list ul li a {
@@ -75,4 +97,28 @@
     height: 1px;
     background: var(--white);
     left: 0;
+}
+
+@media (min-width: 220px){
+    .menu-list {
+        display: none;
+    }
+
+    .nav-btns button:nth-child(1) {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .menu-list {
+        display: flex;
+    }
+
+    .nav-btns button:nth-child(1) {
+        display: block;
+    }
+
+    .nav-btns button:nth-child(2) {
+        display: none;
+    }
 }
