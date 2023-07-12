@@ -54,6 +54,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none
+}
+
 /* NAVIGATION */
 
 nav {
@@ -84,13 +88,12 @@ nav {
     cursor: pointer;
 }
 
-.main-menu {
+.menu-list ul {
     list-style: none;
     display: flex;
     column-gap: 2rem;
     font-weight: 500;
 }
-
 /* HERO */
 
 .hero-section {
@@ -106,6 +109,7 @@ nav {
     grid-gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    min-width: 30vw;
 }
 
 .about-me div {
@@ -134,7 +138,7 @@ nav {
 }
 
 @media (min-width: 220px){
-    .main-menu {
+    .menu-list {
         display: none;
     }
 
@@ -151,7 +155,7 @@ nav {
 
 
 @media (min-width: 800px){
-    .main-menu {
+    .menu-list {
         display: flex;
     }
 
@@ -167,15 +171,17 @@ nav {
 
     .hero-section {
         display: flex;
-        column-gap: 10rem;
+        column-gap: 5%;
     }
 
     .main-text {
-        max-width: 60%;
+        width: fit-content;
     }
 
 }
 
-.fb {
-    height: 2rem;
-}
+/* SCROLL BAR */
+
+::-webkit-scrollbar-track {
+    background: red;
+  }
