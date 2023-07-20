@@ -27,9 +27,37 @@
 }
 
 .skills-level {
-    margin: clamp(2rem, 10vw, 7rem) 4%;
+    margin: clamp(2rem, 10vw, 7rem) 4% 0;
     border-radius: .8rem;
     width: calc(100% - 8%);
+}
+
+.bar-info {
+    margin: clamp(1rem, 5vw, 1.5rem) 4%;
+}
+
+.bar-info button {
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.bar-info-open {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, .9);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+}
+
+.bar-info-open p {
+    max-width: clamp(10rem, 70vw, 55rem);
+    border: 2px solid #fff;
+    padding: 1rem;
+    border-radius: .8rem;
+    font-size: 1.2em;
 }
 
 @media (min-width: 1000px) {

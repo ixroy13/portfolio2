@@ -43,6 +43,12 @@ footer {
     background: #4267B2;
 }
 
+@media (min-width: 200px) {
+    .nav-links > ul > li {
+        text-align: center;
+    }
+}
+
 @media (min-width: 800px) {
     footer {
         flex-direction: row;
@@ -54,6 +60,17 @@ footer {
         place-items: center;
     }
 
+    .nav-links, .contact {
+        display: flex;
+    }
+
+    .contact {
+        justify-content: end;
+    }
+
+    .nav-links > ul > li {
+        text-align: start;
+    }
 }
 
 @media (min-width: 1200px) {

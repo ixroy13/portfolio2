@@ -1,38 +1,34 @@
 import React from "react";
 import "../styles/hero.css"
+import Tile from "./Tile";
 
 export default function Hero() {
     return (
-        <section className="hero-section">
-            <div className="main-text">
-                <h1>
-                    Hi! I'm Olek,
-                    beginner web developer  
-                </h1>
+      <section className="hero-section">
+        <div className="hero-wrap">
+          <div className="main-text">
+            <h1>
+              <span>H</span>
+              <span>i</span>
+              <span>! </span>
+              I'm Olek, beginner web developer
+            </h1>
+          </div>
+            <div className="tiles">
+              <Tile title="YO" value="20" />
+              <Tile title="City" value="Wrocław" />
+              <Tile title="Fav tool" value="React" />
+              <Tile title="Experience" value="2 years" />
             </div>
-            <div className="about-me">
-                <div>
-                    <p>YO</p>
-                    <h2>20</h2>
-                </div>
-                <div>
-                    <p>City</p>
-                    <h2>Wrocław</h2>
-                </div>
-                <div>
-                    <p>Fav tool</p>
-                    <h2>React</h2>
-                </div>
-                <div>
-                    <p>Experience</p>
-                    <h2>2 years</h2>
-                </div>
-            </div>
-            <button className="btn-deafult scroll-arrow">
-                <a href="#skills-section">
-                    <span className="sr-only">Scroll down arrow</span>
-                    <i className="fas fa-arrow-down"></i></a>
-                </button>
-        </section>
-    )
+        </div>
+        <div className="swipe-btn">
+          <button className="btn-deafult scroll-arrow">
+            <a href="#skills-section">
+              <span className="sr-only">Scroll down arrow</span>
+              <i className="fas fa-chevron-down"></i>
+            </a>
+          </button>
+        </div>
+      </section>
+    );
 }
