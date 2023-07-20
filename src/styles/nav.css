@@ -1,6 +1,141 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 4%;
+    font-size: 1.2em;
+}
+
 .logo-btn h1 {
     animation: split 1.5s ease-out infinite;
     text-transform: uppercase;
+}
+
+.nav-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.primary-btn {
+    aspect-ratio: 1;
+    min-height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 10rem;
+}
+
+.primary-btn i {
+    padding: 1rem;
+}
+
+.menu-list ul {
+    list-style: none;
+    display: flex;
+    column-gap: 2rem;
+    font-weight: 500;
+}
+
+/* MENU TOGGLE STYLE */
+
+.button {
+  background: transparent;
+  --button-color: var(--white);
+  min-height: 2.5rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.button img {
+    width: 3rem;
+    height: 3rem;
+}
+
+button .line {
+  transition:
+    y .2s ease-in .2s,
+    rotate .2s ease-in,
+    opacity 0s .2s;
+  transform-origin: center;
+}
+
+button[aria-expanded="true"] .line {
+  transition:
+    y .2s ease-in,
+    rotate .2s ease-in .2s,
+    opacity 0s .2s;
+}
+
+/* .button[aria-expanded="true"] :is(.top, .bottom) {
+  y: 45;
+} */
+
+.button[aria-expanded="true"] .top {
+  rotate: 45deg
+}
+
+.button[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+
+.button[aria-expanded="true"] .bottom {
+  rotate: -45deg
+}
+
+/* MENU UNDERLINE */
+
+.menu-list ul li a {
+    position: relative;
+}
+
+.menu-list ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background: var(--white);
+    top: 110%;
+    left: 50%;
+    transition: var(--transition3);
+}
+
+.menu-list ul li a:hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+    left: 0;
+}
+
+@media (min-width: 220px){
+    .menu-list {
+        display: none;
+    }
+
+    .nav-btns button:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .menu-list {
+        display: flex;
+    }
+
+    .nav-btns button:nth-child(2) {
+        display: block;
+    }
+
+    .nav-btns button:nth-child(3) {
+        display: none;
+    }
+    .primary-btn:hover {
+    background: var(--gray);
+    color: #fff;
+    }
 }
 
 @keyframes split {
@@ -47,78 +182,5 @@
         0 0 0 #4affff,
         0 0 0 #ff0825,
         0 0 0 #fffb19;
-    }
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2% 4%;
-    font-size: 1.2em;
-}
-
-.btn-deafult {
-    font-size: 1.2em;
-    border: none;
-    background: transparent;
-    color: var(--white);
-    cursor: pointer;
-}
-
-.menu-list ul {
-    list-style: none;
-    display: flex;
-    column-gap: 2rem;
-    font-weight: 500;
-}
-
-/* MENU UNDERLINE */
-
-.menu-list ul li a {
-    position: relative;
-}
-
-.menu-list ul li a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 1px;
-    background: var(--white);
-    top: 110%;
-    left: 50%;
-    transition: .3s;
-}
-
-.menu-list ul li a:hover:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: var(--white);
-    left: 0;
-}
-
-@media (min-width: 220px){
-    .menu-list {
-        display: none;
-    }
-
-    .nav-btns button:nth-child(1) {
-        display: none;
-    }
-}
-
-@media (min-width: 800px) {
-    .menu-list {
-        display: flex;
-    }
-
-    .nav-btns button:nth-child(1) {
-        display: block;
-    }
-
-    .nav-btns button:nth-child(2) {
-        display: none;
     }
 }

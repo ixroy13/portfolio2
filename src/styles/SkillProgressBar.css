@@ -44,14 +44,17 @@
     margin-top: 2px;
     display: flex;
     justify-content: space-between;
+    color: var(--white);
 }
 
 .skill-box:nth-child(1) .skill-image {
     background: #e34c26;
+    color: var(--black);
 }
 
 .skill-box:nth-child(2) .skill-image {
     background: #264de4;
+    color: var(--black);
 }
 
 .skill-box:nth-child(3) .skill-image {
@@ -66,14 +69,19 @@
 
 .skill-box:nth-child(5) .skill-image {
     background: #f34f29;
+    color: var(--black);
 }
 
 .skill-box:nth-child(6) .skill-image {
     background: #444140;
+    color: var(--black);
 }
 
 @media (min-width: 1200px) {
     .skill-box:hover {
         background: var(--gray);
+    }
+    body.light-mode .skill-box:hover {
+        background: var(--light-cyan);
     }
 }

@@ -6,6 +6,7 @@
     --gray: #293241ff;
     --black: #000;
     --white: #fff;
+    --transition3: .3s;
 }
 
 * {
@@ -19,8 +20,17 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+body.light-mode {
+    --black: #fff;
+    --white: #000;
+}
+
+.btn-deafult {
+    font-size: 1.2em;
+    border: none;
+    background: transparent;
     color: var(--white);
+    cursor: pointer;
 }
 
 .background {
@@ -38,7 +48,7 @@ body {
     z-index: -1;
 }
 
-svg {
+.background-svg {
     position: absolute;
     top: 0;
     left: 0;
@@ -97,11 +107,6 @@ ul {
     justify-self: start;
 }
 
-.about-me div p {
-    font-size: clamp(.6rem, 1vw, 2rem);
-    font-weight: 500;
-}
-
 .socials {
     display: flex;
     justify-content: center;
@@ -109,6 +114,9 @@ ul {
     column-gap: 1rem;
 }
 
+body.light-mode .socials div a {
+    background: #fff;
+}
 
 @media (max-width: 800px) {
     .main-text {
