@@ -49,12 +49,12 @@
 
 .skill-box:nth-child(1) .skill-image {
     background: #e34c26;
-    color: var(--black);
+    color: #fff;
 }
 
 .skill-box:nth-child(2) .skill-image {
     background: #264de4;
-    color: var(--black);
+    color: #fff;
 }
 
 .skill-box:nth-child(3) .skill-image {
@@ -69,12 +69,12 @@
 
 .skill-box:nth-child(5) .skill-image {
     background: #f34f29;
-    color: var(--black);
+    color: #fff;
 }
 
 .skill-box:nth-child(6) .skill-image {
     background: #444140;
-    color: var(--black);
+    color: #fff;
 }
 
 @media (min-width: 1200px) {

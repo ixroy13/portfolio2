@@ -4,6 +4,11 @@ import MenuList from "./MenuItems";
 
 export default function Navbar() {
     const [theme, setTheme] = React.useState("dark")
+    const [isOpened, setIsOpened] = React.useState(false)
+
+    function changeMenuState() {
+      setIsOpened(prevValue => !prevValue)
+    }
 
     const darkModeSwitch = () => {
         document.body.classList.toggle("light-mode")
@@ -11,6 +16,11 @@ export default function Navbar() {
     }
 
     let themeModeIcon = theme === "light" ? <i className="far fa-moon"></i> : <i className="far fa-sun"></i>
+
+    function openInfoBox() {
+      document.querySelector(".info-box").classList.toggle("box-open")
+      document.body.classList.toggle("fixed-position")
+    }
 
     return (
       <nav>
@@ -33,15 +43,19 @@ export default function Navbar() {
           </button>
 
           <button
+            onClick={openInfoBox}
             title="Personal information"
-            className="btn-deafult primary-btn"
-            href="#"
+            className="btn-deafult primary-btn info-btn"
           >
             <i className="far fa-user"></i>
             <span className="sr-only">My personal information</span>
           </button>
 
-          <button className="button btn-deafult menu-toggle" aria-expanded="false">
+          <button
+            onClick={changeMenuState}
+            className="button btn-deafult menu-toggle"
+            aria-expanded={isOpened}
+          >
             <svg
               fill="var(--button-color)"
               className="hamburger"
@@ -77,6 +91,8 @@ export default function Navbar() {
             <span className="sr-only">Menu toggle</span>
           </button>
         </div>
+
+       
       </nav>
     );
 }

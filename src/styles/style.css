@@ -20,6 +20,15 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    --nav-height: 4.5rem;
+    /* padding-top: var(--nav-height); */
+}
+
+body.fixed-position {
+    overflow: hidden;
+}
+
 body.light-mode {
     --black: #fff;
     --white: #000;
