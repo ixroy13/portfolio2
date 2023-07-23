@@ -79,9 +79,11 @@
     z-index: 20;
     transition: .5s;
     padding: clamp(2rem, 5vw, 10rem);
+    visibility: hidden;
 }
 
 .info-box.box-open {
+    visibility: visible;
     inset: 0;
 }
 

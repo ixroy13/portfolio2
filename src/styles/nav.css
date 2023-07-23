@@ -4,7 +4,7 @@ nav {
     align-items: center;
     padding: 2% 4%;
     font-size: 1.2em;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* height: var(--nav-height);
     width: 100%;
     position: fixed;
@@ -25,7 +25,6 @@ nav {
     column-gap: .5rem;
     transition: .3s;
     z-index: 25;
-
 }
 
 .primary-btn {
@@ -47,8 +46,6 @@ nav {
     font-weight: 500;
 }
 
-
-
 /* MENU TOGGLE STYLE */
 
 .button {
@@ -58,6 +55,7 @@ nav {
   aspect-ratio: 1;
   display: grid;
   place-items: center;
+  z-index: 100;
 }
 
 .button img {
@@ -124,17 +122,37 @@ button[aria-expanded="true"] .line {
 
 @media (max-width: 800px) {
     .fa-moon {
-    translate: 0 -3px;
-}
-}
+        translate: 0 -3px;
+    }
 
-@media (min-width: 220px){
-    .menu-list {
-        display: none;
+    .menu-list ul {
+        background: var(--black);
+        position: fixed;
+        z-index: 10;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        transition: .3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8rem 0 0 0;
+        row-gap: 1.5rem;
+        translate: 100%;
+    }
+
+    .menu-list[data-visible="visible"] ul {
+        translate: 0;
     }
 
     .nav-btns button:nth-child(2) {
-        display: none;
+        position: fixed;
+        bottom: 4%;
+        right: 4%;
+        z-index: 1;
+        background: #171717;
+        color: #fff;
     }
 }
 
@@ -150,10 +168,12 @@ button[aria-expanded="true"] .line {
     .nav-btns button:nth-child(3) {
         display: none;
     }
+
     .primary-btn:hover {
     background: var(--gray);
     color: #fff;
     }
+    
 }
 
 @keyframes split {

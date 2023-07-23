@@ -1,7 +1,6 @@
 .projects {
     padding: 0;
     width: 100%;
-    z-index: 100;
     color: #fff;
     margin-top: clamp(5rem, 8vw, 13rem);
 
@@ -22,7 +21,7 @@
     linear-gradient(
       to right, 
       #00f260, 
-      #0575e6);;
+      #0575e6);
     position: absolute;
     z-index: -1;
     inset: 0;
@@ -37,8 +36,24 @@
 }
 
 .project-tiles a {
-        padding: .8rem;
+    padding: .8rem;
+}
 
+.information {
+    min-width: 30%;
+    line-height: 2rem;
+}
+
+.information h1 {
+    background: 
+    linear-gradient(
+      to right, 
+      #00f260, 
+      #0575e6);
+      display: inline;
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 1000px) {
@@ -58,11 +73,6 @@
 
     .all-tile {
         display: flex;
-    }
-
-    .information {
-        min-width: 30%;
-        line-height: 2rem;
     }
 
     .project-tiles a:hover {

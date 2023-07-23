@@ -12,7 +12,7 @@ export default function Hero() {
               <span>H</span>
               <span>i</span>
               <span>! </span>
-              I'm Olek, beginner web developer
+              I'm Olek, aspiring web developer
             </h1>
           </div>
           <div className="tiles">

@@ -8,6 +8,7 @@ export default function Navbar() {
 
     function changeMenuState() {
       setIsOpened(prevValue => !prevValue)
+      document.body.classList.toggle("fixed-position");
     }
 
     const darkModeSwitch = () => {
@@ -29,7 +30,7 @@ export default function Navbar() {
             <h1>Ixroy</h1>
           </a>
         </div>
-        <div className="menu-list">
+        <div className="menu-list" data-visible={isOpened ? "visible" : "hidden"}>
           <MenuList />
         </div>
         <div className="nav-btns">
@@ -91,8 +92,6 @@ export default function Navbar() {
             <span className="sr-only">Menu toggle</span>
           </button>
         </div>
-
-       
       </nav>
     );
 }
