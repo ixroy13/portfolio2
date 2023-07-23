@@ -4,7 +4,13 @@ nav {
     align-items: center;
     padding: 2% 4%;
     font-size: 1.2em;
-    overflow-x: hidden;
+    overflow: hidden;
+    /* height: var(--nav-height);
+    width: 100%;
+    position: fixed;
+    inset: 0;
+    background: var(--black);
+    z-index: 2000; */
 }
 
 .logo-btn h1 {

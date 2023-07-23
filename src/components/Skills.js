@@ -20,10 +20,7 @@ export default function SkillsSection() {
 
         <div className="bar-info">
           <button className="btn-deafult">How the progress bar was calculated?</button>
-        </div>
-
-        <div className="bar-info-open">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique in officia consequuntur numquam eum animi nostrum maiores! Laudantium fugiat explicabo minus, commodi quaerat exercitationem laborum vero fuga similique eaque incidunt?</p>
+          <p>The progress bar is based on 10 questions test asked by ChatGPT. It should be used more as a fun fact.</p>
         </div>
 
       </section>

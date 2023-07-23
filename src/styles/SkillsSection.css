@@ -38,6 +38,7 @@
 
 .bar-info {
     margin: clamp(1rem, 5vw, 1.5rem) 4%;
+    color: var(--white);
 }
 
 .bar-info button {

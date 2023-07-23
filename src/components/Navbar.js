@@ -23,7 +23,7 @@ export default function Navbar() {
     }
 
     return (
-      <nav>
+      <nav className="main-nav">
         <div className="logo-btn">
           <a href="https://ixroy13.tech/">
             <h1>Ixroy</h1>

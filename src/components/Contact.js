@@ -17,22 +17,22 @@ export default function Contact() {
         <div className="primary-info">
           <h1>Contact</h1>
           <div className="name">
-            <i class="fas fa-pen-nib"></i>
+            <i className="fas fa-pen-nib"></i>
             <p>Aleksander Pal</p>
           </div>
           <div className="email">
-            <i class="fas fa-at"></i>
+            <i className="fas fa-at"></i>
             <a href="mailto: palaleksander111@gmail.com">
               palaleksander111@gmail.com
             </a>
           </div>
           <div className="phone">
-            <i class="fas fa-phone"></i>
+            <i className="fas fa-phone"></i>
             <a href="tel:+48732937754">+48 732 937 754</a>
           </div>
           <div className="adress">
-            <i class="fas fa-home"></i>
-            <p>Gierczyn 93 / Mickiewicza 97, Wrocław</p>
+            <i className="fas fa-home"></i>
+            <p>Gierczyn 93 / ul. Mickiewicza 97, Wrocław</p>
           </div>
         </div>
       </div>
