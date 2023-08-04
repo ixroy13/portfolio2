@@ -20,7 +20,7 @@ export default function ContactInfo() {
         </div>
         <div className="adress">
           <i className="fas fa-home"></i>
-          <p>Gierczyn 93 / ul. Mickiewicza 97, Wrocław</p>
+          <p>Gierczyn 93 / ul. Mickiewicza 97/4, Wrocław</p>
         </div>
       </div>
     );

@@ -11,9 +11,9 @@ export default function Projects() {
       <div className="project-tiles">
         <Project
           title="Blockchain"
-          tech="HTML, CSS, JS"
+          tech="HTML, CSS, JavaScript"
           link="https://ixroy13.github.io/blockchain2/"
-          date="07.29.2022"
+          date="07.29.2022" // date in US format!
           describe="The project is based on a real book for kids about Blockchain. It was my first responsive project so it might not work as good as I want. Working on it I also tried out scroll-snap techniqe but too much code modification was needed so I left it with only arrows to scroll. The graphics are created by me but please remember that I'm not a graphic designer. It's my first web with dark/light mode."
         />
         <Project
@@ -21,7 +21,7 @@ export default function Projects() {
           tech="HTML, CSS, JavaScript"
           link="https://ixroy13.github.io/RockPaperScissors-Game/"
           date="10.18.2022"
-          describe="Inspirated by some YouTube tutorial I tried to build some simple web game. I have to admit it was easier than I thought so as The Big Bang Theory fan I added Lizar and Spock to the game. The scoreboard is copied from Prmiere Leauge 'couse I think it looks great and minimalistic. User can change its and oponent name and colors on the scoreboard."
+          describe="Inspirated by some YouTube tutorial I tried to build some simple web game. I have to admit it was easier than I thought so as The Big Bang Theory fan I added Lizar and Spock to the game. The scoreboard is copied from Premier Leauge 'couse I think it looks great and minimalistic. User can change its and oponent name and colors on the scoreboard."
         />
         <Project
           title="Product Page"

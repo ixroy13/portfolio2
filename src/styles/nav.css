@@ -16,6 +16,7 @@ nav {
 .logo-btn h1 {
     animation: split 1.5s ease-out infinite;
     text-transform: uppercase;
+    user-select: none;
 }
 
 .nav-btns {

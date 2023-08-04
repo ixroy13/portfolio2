@@ -24,11 +24,6 @@ export default function Footer() {
               <i className="fab fa-facebook"></i>
             </a>
           </div>
-          <div className="tt">
-            <a href="https://twitter.com/olekpal" target="_blank">
-              <i className="fab fa-twitter"></i>
-            </a>
-          </div>
         </div>
         <div className="contact">
           <p>© 2023 IXROY Corp.</p>

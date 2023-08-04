@@ -4,6 +4,10 @@ import Tile from "./Tile";
 import Contact from "./Contact";
 
 export default function Hero() {
+    const startCodeDate = new Date("09-27-2021")
+    const today = new Date()
+    const timeDifference = today - startCodeDate
+    const timeDifferenceInYears = timeDifference / (1000 * 60 * 60 * 24 * 365)
     return (
       <section className="hero-section">
         <div className="hero-wrap">
@@ -19,7 +23,7 @@ export default function Hero() {
             <Tile title="YO" value="20" />
             <Tile title="City" value="Wrocław" />
             <Tile title="Fav tool" value="React" />
-            <Tile title="Experience" value="2 years" />
+            <Tile title="Coding for" value={`${timeDifferenceInYears.toFixed(1)} years`} />
           </div>
         </div>
         <div className="swipe-btn">

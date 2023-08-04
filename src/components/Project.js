@@ -6,12 +6,13 @@ export default function Project(props) {
     const today = new Date()
     const timeDifference = today.getTime() - projectDate.getTime();
     const timeDifferenceInWeeks = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 7))
+
     return (
       <a href={props.link}>
         <div className="all-tile">
           <div className="information">
             <h1>{props.title}</h1>
-            <p>HTML, CSS, JavaScript</p>
+            <p>{props.tech}</p>
             <p>Made {timeDifferenceInWeeks} weeks ago</p>
           </div>
           <div>
