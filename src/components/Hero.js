@@ -23,7 +23,7 @@ export default function Hero() {
             <Tile title="YO" value="20" />
             <Tile title="City" value="Wrocław" />
             <Tile title="Fav tool" value="React" />
-            <Tile title="Coding for" value={`${timeDifferenceInYears.toFixed(1)} years`} />
+            <Tile title="Coding for" value={`${Number(timeDifferenceInYears.toFixed(1))} years`} />
           </div>
         </div>
         <div className="swipe-btn">

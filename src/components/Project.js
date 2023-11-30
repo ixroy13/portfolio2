@@ -13,7 +13,7 @@ export default function Project(props) {
           <div className="information">
             <h1>{props.title}</h1>
             <p>{props.tech}</p>
-            <p>Made {timeDifferenceInWeeks} weeks ago</p>
+            <p>Made {Number(timeDifferenceInWeeks)} weeks ago</p>
           </div>
           <div>
             <p>{props.describe}</p>
