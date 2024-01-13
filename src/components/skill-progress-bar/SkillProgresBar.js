@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/SkillProgressBar.css"
+import "./SkillProgressBar.css"
 
 export default function SkillBar(props) {
     const style = {
