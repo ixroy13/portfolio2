@@ -4,7 +4,7 @@ import Tile from "../Tile";
 import Contact from "../contact/Contact";
 
 export default function Hero() {
-  const startCodeDate = new Date("09-27-2021");
+  const startCodeDate = new Date("09T-27-2021");
   const today = new Date();
   const timeDifference = today - startCodeDate;
   const timeDifferenceInYears = timeDifference / (1000 * 60 * 60 * 24 * 365);
