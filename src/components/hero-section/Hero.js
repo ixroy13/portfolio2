@@ -1,7 +1,8 @@
 import React from "react";
-import "../styles/hero.css"
-import Tile from "./Tile";
-import Contact from "./Contact";
+// import "../styles/hero.css"
+import "./hero.css"
+import Tile from "../Tile";
+import Contact from "../Contact";
 
 export default function Hero() {
     const startCodeDate = new Date("09-27-2021")

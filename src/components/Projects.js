@@ -45,7 +45,7 @@ export default function Projects() {
           describe="Koenigsegg as a sports car creator needs to have an awesome website. I tried to rebuild it with all the animations. The project is not done for now"
         />
         <Project
-          title="Tesla Screen Emulator"
+          title="Tesla Software"
           tech="HTML, CSS, JavaScript"
           link="https://ixroy13.github.io/tesla-screen-simulator/"
           date="12.11.2022"
