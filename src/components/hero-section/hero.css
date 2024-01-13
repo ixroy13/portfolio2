@@ -100,7 +100,13 @@
     }
 }
 
-@media (min-width: 800px) {
+@media (max-width: 900px) {
+    .main-text {
+        margin-bottom: 5vw;
+    }
+}
+
+@media (min-width: 900px) {
     .hero-wrap {
         display: flex;
     }
