@@ -12,9 +12,10 @@ export default function SkillsSection() {
         <SkillBar icon="html5" skill={85} />
         <SkillBar icon="css3" skill={75} />
         <SkillBar icon="js" skill={60} />
-        <SkillBar icon="react" skill={10} />
+        <SkillBar icon="react" skill={15} />
         <SkillBar icon="git" skill={5} />
         <SkillBar icon="wordpress" skill={30} />
+        <SkillBar icon="python" skill={35} />
       </div>
 
       <div className="bar-info">

@@ -16,11 +16,11 @@ export default function ContactInfo() {
         </div>
         <div className="phone">
           <i className="fas fa-phone"></i>
-          <a href="tel:+48732937754">+48 732 937 754</a>
+          <a href="tel:+48732937754">+48 732 937 ___</a>
         </div>
         <div className="adress">
           <i className="fas fa-home"></i>
-          <p>ul. Mickiewicza 97/4, Wrocław</p>
+          <p>Wrocław</p>
         </div>
       </div>
     );

@@ -4,8 +4,10 @@ import Tile from "../Tile";
 import Contact from "../contact/Contact";
 
 export default function Hero() {
+  const birthDate = new Date("2003-07-31");
   const startCodeDate = new Date("09/27/2021");
   const today = new Date();
+  const age = Math.floor((today - birthDate) / (1000 * 60 * 60 * 24 * 365.25));
   const timeDifference = today - startCodeDate;
   const timeDifferenceInYears = timeDifference / (1000 * 60 * 60 * 24 * 365);
   return (
@@ -20,9 +22,9 @@ export default function Hero() {
           </h1>
         </div>
         <div className="tiles">
-          <Tile title="YO" value="20" />
+          <Tile title="Years old" value={age.toString()} />
           <Tile title="City" value="Wrocław" />
-          <Tile title="Fav tool" value="React" />
+          <Tile title="Favourite tool" value="React" />
           <Tile
             title="Coding for"
             value={`${Number(timeDifferenceInYears.toFixed(1))} years`}

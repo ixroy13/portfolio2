@@ -1,6 +1,7 @@
 import React from "react";
 import "./nav.css";
 import MenuList from "../MenuItems";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 export default function Navbar() {
   const [theme, setTheme] = React.useState("dark");
@@ -31,7 +32,7 @@ export default function Navbar() {
   return (
     <nav className="main-nav">
       <div className="logo-btn">
-        <a href="https://ixroy13.tech/">
+        <a href="https://ixroy13.github.io/portfolio2/">
           <h1>Ixroy</h1>
         </a>
       </div>
@@ -39,6 +40,7 @@ export default function Navbar() {
         <MenuList />
       </div>
       <div className="nav-btns">
+        <LanguageSwitcher/>
         <button
           className="btn-deafult theme-switch primary-btn"
           onClick={darkModeSwitch}
