@@ -1,7 +1,9 @@
 import React from "react";
 import "./SkillProgressBar.css"
+import { useTranslation } from "react-i18next";
 
 export default function SkillBar(props) {
+    const { t } = useTranslation();
     const style = {
         background: `linear-gradient(to right, #40ff00 ${props.skill}%, #282828 0%)`
     }
@@ -16,8 +18,8 @@ export default function SkillBar(props) {
                     <span style={style} className="bar"></span>
                 </div>
                 <div className="label">
-                    <p>Beginner</p>
-                    <p>Pro</p>
+                    <p>{t("firstSkillLabel")}</p>
+                    <p>{t("secondSkillLabel")}</p>
                 </div>
             </div>
         </div>

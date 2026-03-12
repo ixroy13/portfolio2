@@ -1,9 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactInfo() {
+    const { t } = useTranslation();
     return (
       <div className="primary-info">
-        <h1>Contact</h1>
+        <h1>{t("contact")}</h1>
         <div className="name">
           <i className="fas fa-pen-nib"></i>
           <p>Aleksander Pal</p>

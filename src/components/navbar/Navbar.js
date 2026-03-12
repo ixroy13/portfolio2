@@ -2,8 +2,10 @@ import React from "react";
 import "./nav.css";
 import MenuList from "../MenuItems";
 import LanguageSwitcher from "../LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [theme, setTheme] = React.useState("dark");
   const [isOpened, setIsOpened] = React.useState(false);
 
@@ -44,7 +46,7 @@ export default function Navbar() {
         <button
           className="btn-deafult theme-switch primary-btn"
           onClick={darkModeSwitch}
-          title={theme === "dark" ? "Light Mode" : "Dark Mode"}
+          title={theme === "dark" ? t("lightMode") : t("darkMode")}
         >
           {themeModeIcon}
           <span className="sr-only">Dark/Light mode switch</span>
@@ -52,7 +54,7 @@ export default function Navbar() {
 
         <button
           onClick={openInfoBox}
-          title="Personal information"
+          title={t("personalInfo")}
           className="btn-deafult primary-btn info-btn"
         >
           <i className="far fa-user"></i>

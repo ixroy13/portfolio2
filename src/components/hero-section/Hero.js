@@ -2,8 +2,10 @@ import React from "react";
 import "./hero.css";
 import Tile from "../Tile";
 import Contact from "../contact/Contact";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const birthDate = new Date("2003-07-31");
   const startCodeDate = new Date("09/27/2021");
   const today = new Date();
@@ -15,19 +17,16 @@ export default function Hero() {
       <div className="hero-wrap">
         <div className="main-text">
           <h1>
-            <span>H</span>
-            <span>i</span>
-            <span>! </span>
-            I'm Olek, aspiring web developer
+            {t("greeting")}
           </h1>
         </div>
         <div className="tiles">
-          <Tile title="Years old" value={age.toString()} />
-          <Tile title="City" value="Wrocław" />
-          <Tile title="Favourite tool" value="React" />
+          <Tile title={t("years")} value={age.toString()} />
+          <Tile title={t("city")} value="Wrocław" />
+          <Tile title={t("favTool")} value="React" />
           <Tile
-            title="Coding for"
-            value={`${Number(timeDifferenceInYears.toFixed(1))} years`}
+            title={t("codingFor")}
+            value={`${Number(timeDifferenceInYears.toFixed(1))} ${t("yesrsScience")}`}
           />
         </div>
       </div>

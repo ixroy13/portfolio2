@@ -1,12 +1,13 @@
 import React from "react";
 import "./SkillsSection.css";
 import SkillBar from "../skill-progress-bar/SkillProgresBar";
-
+import { useTranslation } from "react-i18next";
 export default function SkillsSection() {
+  const { t } = useTranslation();
   return (
     <section className="skills" id="skills-section">
       <div className="title">
-        <h1>Skills</h1>
+        <h1>{t("skills")}</h1>
       </div>
       <div className="skills-level">
         <SkillBar icon="html5" skill={85} />
@@ -20,11 +21,10 @@ export default function SkillsSection() {
 
       <div className="bar-info">
         <button className="btn-deafult">
-          How the progress bar was calculated?
+          {t("howCalculatedQuestion")}
         </button>
         <p>
-          The progress bar is based on 10 questions test asked by ChatGPT. It
-          should be used more as a fun fact.
+          {t("howCalculatedAnswer")}
         </p>
       </div>
     </section>
