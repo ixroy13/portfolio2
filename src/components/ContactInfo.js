@@ -12,13 +12,13 @@ export default function ContactInfo() {
         </div>
         <div className="email">
           <i className="fas fa-at"></i>
-          <a href="mailto: palaleksander111@gmail.com">
+          <a href="#">
             palaleksander111@gmail.com
           </a>
         </div>
         <div className="phone">
           <i className="fas fa-phone"></i>
-          <a href="tel:+48732937754">+48 732 937 ___</a>
+          <a href="#">+48 732 937 ___</a>
         </div>
         <div className="adress">
           <i className="fas fa-home"></i>
