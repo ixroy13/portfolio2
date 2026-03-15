@@ -1,0 +1,22 @@
+.cv-container {
+    text-align: center;
+    color: var(--white);
+    margin: 0 4%;
+}
+
+.cv-container h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2em 0 .5em;
+}
+
+.cv-contact-info {
+    display: flex;
+
+    justify-content: center;
+    border-top: 1px solid var(--white);
+}
+
+.cv-contact-info p {
+    margin: .5em .3rem;
+}

@@ -33,6 +33,9 @@ const resources = {
       lightMode: "Light Mode",
       darkMode: "Dark Mode",
       personalInfo: "Personal information",
+      homePage: "Home",
+      scientificWorks: "Scientific works",
+      archive2023: "Page from 2023",
     },
   },
   pl: {
@@ -65,6 +68,9 @@ const resources = {
       lightMode: "Tryb jasny",
       darkMode: "Tryb ciemny",
       personalInfo: "Informacje osobiste",
+      homePage: "Strona główna",
+      scientificWorks: "Prace naukowe",
+      archive2023: "Strona z 2023 roku",
     },
   },
 };

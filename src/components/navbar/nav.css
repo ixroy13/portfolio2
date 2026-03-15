@@ -11,7 +11,11 @@ nav {
     inset: 0;
     background: var(--black);
     z-index: 2000; */
+    position: relative;
+    z-index: 6000;
 }
+
+
 
 .logo-btn h1 {
   animation: split 1.5s ease-out infinite;
@@ -34,7 +38,7 @@ nav {
 }
 
 .lang-btn {
-    background: var(--black);
+    background: transparent;
     color: var(--white);
     border: 1px solid transparent;
     padding: 5px 12px;

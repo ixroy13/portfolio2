@@ -1,32 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 
 export default function MenuList() {
-    return (
-      <ul>
-        <li>
-          <a href="https://ixroy13.github.io/blockchain2/" target="_blank">
-            Blockchain
-          </a>
-        </li>
-        <li>
-          <a href="https://ixroy13.github.io/login-form/" target="_blank">Login Form</a>
-        </li>
-        <li>
-          <a
-            href="https://ixroy13.github.io/RockPaperScissors-Game/"
-            target="_blank"
-          >
-            Rock Paper Scissors
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://ixroy13.github.io/shop-product-site/"
-            target="_blank"
-          >
-            Ecomerce
-          </a>
-        </li>
-      </ul>
-    );
+  const { t } = useTranslation();
+  return (
+    <ul>
+      <li>
+        <Link to="/">{t('homePage')}</Link>
+      </li>
+      <li>
+        <Link to="/cv">CV</Link>
+      </li>
+      <li>
+        <Link to="/prace-naukowe">{t('scientificWorks')}</Link>
+      </li>
+      <li>
+        <Link to="/archiwum-2023">{t('archive2023')}</Link>
+      </li>
+    </ul>
+  );
 }

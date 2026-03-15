@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./nav.css";
 import MenuList from "../MenuItems";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useTranslation } from "react-i18next";
+import Contact from "../contact/Contact";
 
 export default function Navbar() {
   const { t } = useTranslation();
-  const [theme, setTheme] = React.useState("dark");
-  const [isOpened, setIsOpened] = React.useState(false);
+  const [theme, setTheme] = useState("dark");
+  const [isOpened, setIsOpened] = useState(false);
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   function changeMenuState() {
     setIsOpened((prevValue) => !prevValue);
@@ -16,7 +19,12 @@ export default function Navbar() {
 
   const darkModeSwitch = () => {
     document.body.classList.toggle("light-mode");
-    theme === "dark" ? setTheme("light") : setTheme("dark");
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const openInfoBox = () => {
+    setIsInfoOpen((prev) => !prev);
+    document.body.classList.toggle("fixed-position");
   };
 
   let themeModeIcon =
@@ -26,81 +34,85 @@ export default function Navbar() {
       <i className="far fa-sun"></i>
     );
 
-  function openInfoBox() {
-    document.querySelector(".info-box").classList.toggle("box-open");
-    document.body.classList.toggle("fixed-position");
-  }
-
   return (
-    <nav className="main-nav">
-      <div className="logo-btn">
-        <a href="https://ixroy13.github.io/portfolio2/">
-          <h1>Ixroy</h1>
-        </a>
-      </div>
-      <div className="menu-list" data-visible={isOpened ? "visible" : "hidden"}>
-        <MenuList />
-      </div>
-      <div className="nav-btns">
-        <LanguageSwitcher/>
-        <button
-          className="btn-deafult theme-switch primary-btn"
-          onClick={darkModeSwitch}
-          title={theme === "dark" ? t("lightMode") : t("darkMode")}
-        >
-          {themeModeIcon}
-          <span className="sr-only">Dark/Light mode switch</span>
-        </button>
+    <>
+      <nav className="main-nav">
+        <div className="logo-btn">
+          <Link to="/">
+            <h1>Ixroy</h1>
+          </Link>
+        </div>
 
-        <button
-          onClick={openInfoBox}
-          title={t("personalInfo")}
-          className="btn-deafult primary-btn info-btn"
+        <div
+          className="menu-list"
+          data-visible={isOpened ? "visible" : "hidden"}
         >
-          <i className="far fa-user"></i>
-          <span className="sr-only">My personal information</span>
-        </button>
+          <MenuList />
+        </div>
 
-        <button
-          onClick={changeMenuState}
-          className="button btn-deafult menu-toggle"
-          aria-expanded={isOpened}
-        >
-          <svg
-            fill="var(--button-color)"
-            className="hamburger"
-            viewBox="0 0 100 100"
-            width="30"
+        <div className="nav-btns">
+          <LanguageSwitcher />
+
+          <button
+            className="btn-deafult theme-switch primary-btn"
+            onClick={darkModeSwitch}
+            title={theme === "dark" ? t("lightMode") : t("darkMode")}
           >
-            <rect
-              className="line top"
-              width="80"
-              height="10"
-              x="10"
-              y="25"
-              rx="5"
-            ></rect>
-            <rect
-              className="line middle"
-              width="80"
-              height="10"
-              x="10"
-              y="45"
-              rx="5"
-            ></rect>
-            <rect
-              className="line bottom"
-              width="80"
-              height="10"
-              x="10"
-              y="65"
-              rx="5"
-            ></rect>
-          </svg>
+            {themeModeIcon}
+            <span className="sr-only">Dark/Light mode switch</span>
+          </button>
 
-          <span className="sr-only">Menu toggle</span>
-        </button>
-      </div>
-    </nav>
+          <button
+            onClick={openInfoBox}
+            title={t("personalInfo")}
+            className="btn-deafult primary-btn info-btn"
+          >
+            <i className="far fa-user"></i>
+            <span className="sr-only">My personal information</span>
+          </button>
+
+          <button
+            onClick={changeMenuState}
+            className="button btn-deafult menu-toggle"
+            aria-expanded={isOpened}
+          >
+            <svg
+              fill="var(--button-color)"
+              className="hamburger"
+              viewBox="0 0 100 100"
+              width="30"
+            >
+              <rect
+                className="line top"
+                width="80"
+                height="10"
+                x="10"
+                y="25"
+                rx="5"
+              ></rect>
+              <rect
+                className="line middle"
+                width="80"
+                height="10"
+                x="10"
+                y="45"
+                rx="5"
+              ></rect>
+              <rect
+                className="line bottom"
+                width="80"
+                height="10"
+                x="10"
+                y="65"
+                rx="5"
+              ></rect>
+            </svg>
+            <span className="sr-only">Menu toggle</span>
+          </button>
+        </div>
+      </nav>
+
+      <Contact isOpen={isInfoOpen} />
+    </>
   );
 }

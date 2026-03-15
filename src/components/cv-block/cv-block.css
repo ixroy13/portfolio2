@@ -1,0 +1,29 @@
+.cv-block-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.name-of-the-block h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: start;
+}
+
+.name-of-the-block p {
+    margin: 0;
+}
+
+.cv-dates-places {
+    text-align: right;
+}
+
+.cv-dates-places p:first-child {
+    margin: 0 0 0.3rem 0;
+}
+
+.cv-dates-places p {
+    margin: 0;
+}
